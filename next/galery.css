@@ -1,0 +1,620 @@
+:root {
+  --main-theme-color: #210e09;
+  --button-bg-color: #d5621d;
+  --index: calc(1vw + 1vh);
+  --side-small: 26;
+  --size-big: 36;
+  --color-bg: rgb(51, 22, 11);
+  --color-noactive-bg: rgb(42, 18, 10);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  background: var(--main-theme-color);
+  color: white;
+  min-width: 300px;
+  padding: 30px 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+.wrapper {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+.header {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+.header .menu_rect {
+  display: none;
+}
+.header .menu ul {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.header button {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid var(--button-bg-color);
+  border-radius: 3px;
+}
+.header button a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.header .menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+.header ul {
+  list-style: none;
+}
+.header .menu {
+  transition: all 0.5s ease-in-out;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+.header:hover {
+  padding: 5px 5px;
+  background-color: #a0522d;
+  transition: all 1s ease-in-out;
+  border-radius: 5px;
+}
+.header {
+  border-radius: 5px;
+  padding: 5px 5px;
+  transition: all 1s ease-in-out;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.contacts .head {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contacts .head p {
+  padding: 10px 15px;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contacts .head h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contacts .contact_table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  gap: 40px;
+  height: 500px;
+}
+.contacts .contact_table .contact_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 2px solid var(--button-bg-color);
+  background: rgba(213, 98, 29, 0.07);
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contacts .contact_table .contact_list .line {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.contacts .contact_table .contact_list .line .line_line {
+  width: 100%;
+  height: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(213, 98, 29, 1);
+}
+.contacts .contact_table .contact_list h1 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contacts .contact_table .contact_list p {
+  font-size: 14px;
+}
+.contacts .map {
+  width: 900px;
+  height: 100%;
+  border: 2px solid #d5621d;
+  border-radius: 5px;
+}
+.contacts .map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.footer {
+  margin-top: 70px;
+  width: 1150px;
+  opacity: 0.4;
+}
+.footer .footer_block {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.afichap {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.afichap .head {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+.afichap .head p {
+  padding: 10px;
+  text-transform: uppercase;
+  color: black;
+  background: white;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+}
+.afichap .head h1 {
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.aficha {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.aficha .image_item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.5s ease-in-out;
+}
+.aficha .image_item svg {
+  position: absolute;
+  opacity: 0;
+  left: 125px;
+  top: 150px;
+  transition: all 0.5s ease-in-out;
+}
+.aficha .image_item:hover svg {
+  opacity: 1;
+}
+.aficha .image_item:hover img {
+  opacity: 0.2;
+}
+.aficha img {
+  width: 300px;
+  height: 350px;
+  transition: all 0.5s ease-in-out;
+}
+.aficha .log11 {
+  padding: 10px;
+  background: var(--button-bg-color);
+  color: white;
+  bottom: 120px;
+  left: 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.aficha .log12 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  bottom: 85px;
+  text-transform: uppercase;
+  left: 20px;
+}
+.aficha .log13 {
+  padding: 10px 15px;
+  border: 3px solid var(--button-bg-color);
+  left: 20px;
+  border-radius: 5px;
+  bottom: 30px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.afichap .aficha .image_item {
+  position: relative;
+  display: block;
+}
+.afichap .aficha .image_item.active {
+  position: fixed;
+  width: 100vw;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.afichap .aficha .image_item.active > #myImg {
+  width: 30vw;
+  height: 70vh;
+  object-fit: cover;
+  box-shadow: 0px 0px 100vw 100vw rgba(0, 0, 0, 0.7);
+}
+.afichap .aficha .image_item.active:hover > #myImg {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.afichap .aficha .image_item.active > #myImg:hover {
+  transform: scale(1.3);
+  border-radius: 0%;
+}
+.afichap .aficha .image_item.active:hover {
+  opacity: 1;
+}
+.afichap .aficha .image_item.active img:hover {
+  opacity: 1;
+}
+.afichap .aficha .image_item.active img {
+  width: 70vw;
+  height: 100vh;
+}
+.afichap .aficha .image_item.active .lupa {
+  display: none;
+  opacity: 0;
+}
+.afichap .aficha .myModal {
+  display: none;
+}
+.header .menu ul li:hover {
+  background: var(--button-bg-color);
+}
+.header .menu ul li:hover a {
+  color: black;
+}
+.header .menu ul li {
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.header .menu ul li a {
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (max-width: 415px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+  body {
+    display: flex;
+    align-items: start;
+    width: 414px;
+    height: auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: var(--main-theme-color);
+    color: white;
+    font-size: calc(var(--index) * 0.6);
+    padding: 0;
+  }
+  .wrapper {
+    width: 414px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .menu_rect {
+    display: flex;
+  }
+  .header {
+    padding: 10px 10px;
+    width: 100%;
+    gap: 0;
+    position: relative;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+  .menu_rect {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #d5621d;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transition: all 0.4s ease-in-out;
+  }
+  .menu_rect.active {
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    transition: all 0.4s ease-in-out;
+  }
+  .header button.active {
+    display: block;
+    width: fit-content;
+    position: fixed;
+    z-index: 9999;
+    top: 180px;
+    left: 95px;
+    color: black;
+    right: 0;
+    border: 2px solid black;
+    transition: all 1s ease-in-out;
+  }
+  .header button.active a {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+  }
+  .menu {
+    display: none;
+  }
+  .menu.active {
+    position: fixed;
+    width: 414px;
+    height: 100vh;
+    display: flex;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    z-index: 9999;
+    background: #d5621d;
+  }
+  .menu.active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu.active ul li a {
+    font-size: 24px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .header button {
+    display: none;
+  }
+  .contacts {
+    width: 100%;
+    margin-top: 100px;
+  }
+  .contacts .head {
+    font-size: 14px;
+  }
+  .contacts .contact_table {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts .contact_table {
+    font-size: 14px;
+    width: 414px;
+    padding: 0;
+    height: auto;
+  }
+  .contacts .contact_table .contact_list {
+    height: 500px;
+  }
+  .contacts .contact_table .map {
+    width: 100%;
+    height: 500px;
+  }
+  .contacts .contact_table .map iframe {
+    height: 100%;
+  }
+  .footer {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .footer .footer_block {
+    margin-top: 5px;
+    padding: 5px 10px;
+  }
+  .afichap {
+    width: 414px;
+  }
+  .afichap .head {
+    font-size: 14px;
+  }
+  .afichap .aficha img {
+    width: 120px;
+    height: 140px;
+  }
+  .afichap .aficha {
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .afichap .image_item {
+    position: relative;
+  }
+  .afichap .image_item svg {
+    top: 50px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+  }
+  .afichap .aficha .image_item.active {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    z-index: 900;
+    top: 10%;
+    left: 5px;
+    right: 5px;
+    box-shadow: 0px 0px 1000px 1000px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+  }
+  .afichap .aficha .image_item.active img {
+    width: 100%;
+    height: 100%;
+  }
+  .afichap .aficha .image_item.active .lupa {
+    display: none;
+    opacity: 0;
+  }
+  .afichap .aficha .image_item.active {
+    position: fixed;
+    width: 100vw;
+    z-index: 900;
+    top: -100px;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+  }
+  .afichap .aficha .image_item.active > #myImg {
+    width: 70vw;
+    height: 50vh;
+    object-fit: cover;
+    box-shadow: 0px 0px 1000px 1000px rgba(0, 0, 0, 0.8);
+  }
+  .afichap .aficha .image_item.active:hover > #myImg {
+    opacity: 1;
+  }
+  .afichap .aficha .image_item.active > #myImg:hover {
+    scale: (1.5);
+  }
+}
+@media only screen and (max-height: 600px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+  body {
+    display: flex;
+    align-items: start;
+    width: 1024px;
+    height: auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: var(--main-theme-color);
+    color: white;
+    font-size: calc(var(--index) * 0.6);
+    padding: 0;
+  }
+  .wrapper .header {
+    gap: 80px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+  body {
+    display: flex;
+    align-items: start;
+    width: 1024px;
+    height: auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: var(--main-theme-color);
+    color: white;
+    font-size: calc(var(--index) * 0.6);
+    padding: 0;
+  }
+  .wrapper .header {
+    gap: 80px;
+    margin-top: 10px;
+  }
+  .contacts {
+    margin-left: 10px;
+  }
+  .contacts .contact_table {
+    width: 1000px;
+    padding: 0 10px;
+  }
+  .footer {
+    width: 1000px;
+    margin-left: 10px;
+    padding: 0 10px;
+  }
+  .afichap {
+    width: 1000px;
+    margin-left: 10px;
+  }
+  .afichap .aficha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 100px;
+  }
+  .afichap .aficha img {
+    width: 230px;
+    height: 250px;
+  }
+  .afichap .aficha svg {
+    left: 40%;
+    top: 40%;
+  }
+}
