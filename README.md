@@ -1,1 +1,1 @@
-Open index.html
+Open next/aficha/pages/index.html
